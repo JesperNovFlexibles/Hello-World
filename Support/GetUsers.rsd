@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>MDS</DataSourceReference>
+      <CommandText>SELECT MDSPRM_PERS.PERS_ID, MDSPRM_PERS.FIRST_NAME, MDSPRM_PERS.NAME, MDSPRM_PERS.EMAIL1, MDSPRM_PERS.MOBILE, MDSPRM_PERS.PERS_DEL, 
+                  MDSPRM_GRP_PERS.PERS_GRP_ID
+FROM     MDSPRM_PERS INNER JOIN
+                  MDSPRM_GRP_PERS ON MDSPRM_PERS.SITE_KEY = MDSPRM_GRP_PERS.SITE_KEY AND MDSPRM_PERS.PERS_ID = MDSPRM_GRP_PERS.PERS_ID</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PERS_ID">
+        <DataField>PERS_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FIRST_NAME">
+        <DataField>FIRST_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NAME">
+        <DataField>NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PERS_GRP_ID">
+        <DataField>PERS_GRP_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EMAIL1">
+        <DataField>EMAIL1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MOBILE">
+        <DataField>MOBILE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PERS_DEL">
+        <DataField>PERS_DEL</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
